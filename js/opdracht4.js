@@ -16,7 +16,7 @@ function schrijfTafels() {
                 number1++
                 document.write("<br>");
             }
-        } else if (Number.isNaN(number)) {
+        } else if (isNaN(number)) {
             alert("U dient een getal in te voeren.");
         } else if (number <=0 || number >= 11){
             alert("Bereik van getal moet zijn: 1 t/m 10.");
