@@ -1,10 +1,25 @@
-var name;
-var age;
+var askName;
+var askAge;
+var ask = true;
 
-function printName(name,age){
-	document.write("Hallo "+name+", je leeftijd is "+age+" jaar");
+function printNameAge(name, age) {
+    alert("Hallo " + name + ", je leeftijd is " + age + " jaar");
 }
 
-while (ask==true) {
-	name = prompt("Wat is je naam?\nOf type stop om te stoppen.");
+function askNameAge(){
+	while (ask == true) {
+	    askName = prompt("Wat is je naam?\nOf type stop om te stoppen.");
+	    if (askName == "stop") {
+	        ask = false
+	    } else {
+	        askAge = prompt("Hoe oud ben je?\nOf type stop om te stoppen.");
+	        if (askAge == "stop") {
+	            ask = false
+	        } else {
+	            printNameAge(askName, askAge);
+	        }
+	    }
+	}
 }
+
+askNameAge();
